@@ -12844,6 +12844,11 @@ naming: grid - package width</description>
 <sheet>
 <description>Power Supply Unit</description>
 <plain>
+<text x="20.32" y="81.28" size="1.778" layer="91">Easy Power Module
+230V AC to 5V DC</text>
+<text x="-25.4" y="78.74" size="1.778" layer="91">Terminal Blocks</text>
+<text x="-25.4" y="78.74" size="1.778" layer="91">Terminal Blocks</text>
+<text x="50.8" y="81.28" size="1.778" layer="91">5V DC</text>
 </plain>
 <instances>
 <instance part="U2" gate="G$1" x="30.48" y="73.66" smashed="yes"/>
@@ -13231,9 +13236,9 @@ naming: grid - package width</description>
 <attribute name="NAME" x="121.92" y="58.928" size="1.778" layer="95"/>
 <attribute name="VALUE" x="121.92" y="40.64" size="1.778" layer="96"/>
 </instance>
-<instance part="JP2" gate="G$1" x="48.26" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="53.975" y="64.77" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="43.18" y="64.77" size="1.778" layer="96" rot="R270"/>
+<instance part="JP2" gate="G$1" x="147.32" y="17.78" smashed="yes" rot="R270">
+<attribute name="NAME" x="153.035" y="24.13" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="142.24" y="24.13" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="T4" gate="G$1" x="93.98" y="60.96" smashed="yes">
 <attribute name="NAME" x="96.52" y="60.96" size="1.778" layer="95"/>
@@ -13299,22 +13304,6 @@ naming: grid - package width</description>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LIMIT_PIN2" class="0">
-<segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
-<label x="58.42" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="RELAY_CONT" class="0">
-<segment>
-<pinref part="JP2" gate="G$1" pin="2"/>
-<wire x1="48.26" y1="60.96" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="58.42" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
-<label x="30.48" y="58.42" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="PH" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="SWCOMMON"/>
@@ -13333,13 +13322,13 @@ naming: grid - package width</description>
 </net>
 <net name="TUBE_N" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="SWOPEN"/>
-<wire x1="137.16" y1="45.72" x2="137.16" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="27.94" x2="160.02" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="27.94" x2="160.02" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="58.42" x2="157.48" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="TUBE" gate="-2" pin="K"/>
 <wire x1="157.48" y1="58.42" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="149.86" y1="20.32" x2="149.86" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="27.94" x2="160.02" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RELAY_+" class="0">
@@ -13355,6 +13344,22 @@ naming: grid - package width</description>
 <wire x1="114.3" y1="53.34" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
 <junction x="114.3" y="55.88"/>
 <label x="109.22" y="58.42" size="1.778" layer="95" rot="R180"/>
+</segment>
+</net>
+<net name="RELAY_CONT" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="60.96" x2="60.96" y2="60.96" width="0.1524" layer="91"/>
+<label x="60.96" y="60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="SWOPEN"/>
+<wire x1="137.16" y1="45.72" x2="137.16" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="20.32" x2="147.32" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="27.94" x2="137.16" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -13402,8 +13407,8 @@ naming: grid - package width</description>
 <instance part="GND14" gate="1" x="139.7" y="66.04" smashed="yes">
 <attribute name="VALUE" x="137.16" y="63.5" size="1.778" layer="96"/>
 </instance>
-<instance part="P+9" gate="VCC" x="142.24" y="66.04" smashed="yes" rot="R180">
-<attribute name="VALUE" x="144.78" y="68.58" size="1.778" layer="96" rot="R270"/>
+<instance part="P+9" gate="VCC" x="149.86" y="63.5" smashed="yes" rot="R180">
+<attribute name="VALUE" x="152.4" y="66.04" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
 <busses>
@@ -13449,9 +13454,9 @@ naming: grid - package width</description>
 <wire x1="91.44" y1="45.72" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="A" pin="5"/>
 <pinref part="P+9" gate="VCC" pin="VCC"/>
-<wire x1="142.24" y1="68.58" x2="142.24" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="A" pin="8"/>
+<wire x1="149.86" y1="66.04" x2="149.86" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -13477,9 +13482,9 @@ naming: grid - package width</description>
 <label x="25.4" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="A" pin="8"/>
-<wire x1="149.86" y1="88.9" x2="149.86" y2="81.28" width="0.1524" layer="91"/>
-<label x="149.86" y="93.98" size="1.778" layer="95" rot="R90"/>
+<pinref part="JP5" gate="A" pin="5"/>
+<wire x1="142.24" y1="88.9" x2="142.24" y2="83.82" width="0.1524" layer="91"/>
+<label x="142.24" y="93.98" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="GREEN_LED_CONT" class="0">
@@ -13489,9 +13494,9 @@ naming: grid - package width</description>
 <label x="22.86" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="A" pin="7"/>
-<wire x1="147.32" y1="88.9" x2="147.32" y2="81.28" width="0.1524" layer="91"/>
-<label x="147.32" y="93.98" size="1.778" layer="95" rot="R90"/>
+<pinref part="JP5" gate="A" pin="6"/>
+<wire x1="144.78" y1="88.9" x2="144.78" y2="83.82" width="0.1524" layer="91"/>
+<label x="144.78" y="93.98" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="RELAY_CONT" class="0">
@@ -13513,9 +13518,9 @@ naming: grid - package width</description>
 <label x="27.94" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="A" pin="6"/>
-<wire x1="144.78" y1="88.9" x2="144.78" y2="81.28" width="0.1524" layer="91"/>
-<label x="144.78" y="93.98" size="1.778" layer="95" rot="R90"/>
+<pinref part="JP5" gate="A" pin="7"/>
+<wire x1="147.32" y1="88.9" x2="147.32" y2="83.82" width="0.1524" layer="91"/>
+<label x="147.32" y="93.98" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="SWITCH_IN" class="0">
@@ -13536,6 +13541,10 @@ naming: grid - package width</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)

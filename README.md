@@ -12,3 +12,5 @@ Process for Uploading Firmware
 
 The System uses Atmega 13A Microcontroller for more details refer the datasheet:http://ww1.microchip.com/downloads/en/devicedoc/doc8126.pdf
 Follow the link for uploading firmware to Atemga 13A https://www.engineersgarage.com/arduino/atmel-attiny13a-with-arduino-ide/#:~:text=Select%20%E2%80%9CArduino%20as%20ISP%E2%80%9D%20from,by%20pressing%20the%20upload%20button.
+
+The Repository will be updated with new files

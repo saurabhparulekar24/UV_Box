@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2021-01-26T07:53:38Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "U WE BOX"
+        },
+        "Owner": "Saurabh Parulekar <saurabh.parulekar24@gmail.com>",
+        "Size": {
+            "X": 111.74,
+            "Y": 51.74
+        }
+    }
+}

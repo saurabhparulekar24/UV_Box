@@ -1,0 +1,2 @@
+The CAM outputs are the default which are provided by EAGLE while generating cam outputs
+if any additional files are required then re-generate the cam outputs using the ".brd" file 
